@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp);
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -19,8 +19,23 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Vaeljund App'),
       ),
-      body: Center(
-        child: Text('Widget Playground'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Container(
+            width: double.infinity,
+            child: Card(
+              color: Colors.blue,
+              child: Text('Chart!'),
+              elevation: 5,
+            ),
+          ),
+          Card(
+            color: Colors.red,
+            child: Text('List of TX'),
+          )
+        ],
       ),
     );
   }
